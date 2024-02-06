@@ -535,6 +535,9 @@ footer{
         }
     }
     .share-cart{
+        .cart{
+            width: 380px;
+        }
         .form{
             form{
                 label{
@@ -676,6 +679,10 @@ footer{
     }
     .share-cart{
         display: inline;
+        .none-cart{
+            margin: 0;
+            padding: 250px 75px;
+        }
         .cart{
             width: 370px;
             margin: 0 auto;
@@ -754,6 +761,9 @@ footer{
     }
     .share-cart{
         display: inline;
+        .none-cart{
+            padding: 250px 45px;
+        }
         .cart{
             width: 370px;
             margin: 0 auto;
@@ -822,6 +832,9 @@ footer{
         .form{
             margin-left: 5px;
         }
+        .none-cart{
+            padding: 250px 20px;
+        }
     }
     .cart-main{
         .carts{
@@ -840,6 +853,9 @@ footer{
 }
 @media screen and (width<321px) {
     .share-cart{
+        .none-cart{
+            padding: 250px 15px;
+        }
         .cart{
             width: 100%;
             .orders{

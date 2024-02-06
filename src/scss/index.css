@@ -526,6 +526,9 @@ footer .copy {
   .cart-main .view .img-area img {
     width: 300px;
   }
+  .share-cart .cart {
+    width: 380px;
+  }
   .share-cart .form form label input {
     width: 200px;
   }
@@ -633,6 +636,10 @@ footer .copy {
   .share-cart {
     display: inline;
   }
+  .share-cart .none-cart {
+    margin: 0;
+    padding: 250px 75px;
+  }
   .share-cart .cart {
     width: 370px;
     margin: 0 auto;
@@ -701,6 +708,9 @@ footer .copy {
   .share-cart {
     display: inline;
   }
+  .share-cart .none-cart {
+    padding: 250px 45px;
+  }
   .share-cart .cart {
     width: 370px;
     margin: 0 auto;
@@ -761,6 +771,9 @@ footer .copy {
   .share-cart .form {
     margin-left: 5px;
   }
+  .share-cart .none-cart {
+    padding: 250px 20px;
+  }
   .cart-main .carts .cart {
     width: 150px;
   }
@@ -772,6 +785,9 @@ footer .copy {
   }
 }
 @media screen and (width < 321px) {
+  .share-cart .none-cart {
+    padding: 250px 15px;
+  }
   .share-cart .cart {
     width: 100%;
   }
