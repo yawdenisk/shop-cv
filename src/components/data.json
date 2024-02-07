@@ -94,4 +94,14 @@
         "category" : "piling",
         "description" : "богдан лох" 
     }
+    ,
+    {
+        "id" : "11",
+        "title" : "Крем СОСОк",
+        "count" : "34000000.00",
+        "foto" : "1.png",
+        "quantity" : 1, 
+        "category" : "piling",
+        "description" : "богдан лох" 
+    }
 ]
