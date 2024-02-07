@@ -27,7 +27,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
       let [userPhone, setUserPhone] = useState('')
       let [userCity, setUserCity] = useState('')
       let [userMail, setUserMail] = useState('')
-      let [agree, setArgee] = useState(false);
+      let [agree, setArgee] = useState(false)
   return (
     <div className='share-cart'>
         {orders.length > 0 ? (
