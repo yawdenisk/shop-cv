@@ -1,0 +1,10 @@
+[build]
+  functions = "functions"  # Папка, в которой будут храниться ваши функции AWS Lambda
+
+[[redirects]]  # Перенаправление всех запросов на Netlify Functions
+  from = "/*"
+  to = "/.netlify/functions/server/:splat"
+  status = 200
+
+[dev]
+  functionsPort = 3001  # Порт, на котором запускается ваше Express-приложение локально
