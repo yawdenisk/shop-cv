@@ -80,7 +80,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
                 <input type="text" name="name" onChange={(event) => setUserPost(event.target.value)}/>
             </label>
             </form>
-            <button className='button1' onClick={() => sendOrdersToEmail()}>Відправити замовленяя</button>
+            <button className='button1' onClick={() => {sendOrdersToEmail(); setArgee(agree = true);}}>Відправити замовленяя</button>
         </div>
         </>
         ) : (
