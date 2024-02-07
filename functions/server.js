@@ -1,8 +1,11 @@
 const express = require('express');
+const cors = require('cors'); // Добавим модуль для обработки CORS
 const nodemailer = require('nodemailer');
 const serverless = require('serverless-http'); 
 const app = express();
 
+// Добавим использование CORS
+app.use(cors());
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
@@ -13,7 +16,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.post('/.netlify/functions/server/send-email', async (req, res) => {
+app.post('/send-email', async (req, res) => { // Обработчик POST-запроса для отправки письма
   const { orders, count, userName, userSurName, userMail, userCity, userPost, userPhone } = req.body;
 
   if (!orders) {
@@ -36,11 +39,11 @@ app.post('/.netlify/functions/server/send-email', async (req, res) => {
   };
 
   try {
-    await transporter.sendMail(mailOptions);
-    res.status(200).send('Email sent successfully');
+    await transporter.sendMail(mailOptions); // Отправляем письмо
+    res.status(200).send('Email sent successfully'); // Ответ в случае успешной отправки
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error sending email');
+    res.status(500).send('Error sending email'); // Ответ в случае ошибки
   }
 });
 
