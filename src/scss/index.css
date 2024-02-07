@@ -833,6 +833,9 @@ footer .copy {
   }
 }
 @media screen and (width < 321px) {
+  .cart-main .view .img-area img {
+    width: 150px;
+  }
   .share-cart .none-cart {
     padding: 250px 15px;
   }
