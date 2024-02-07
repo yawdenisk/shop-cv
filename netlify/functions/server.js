@@ -37,36 +37,11 @@ app.post('/send-email', async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    return res.status(200).json({ message: 'Email sent successfully' });
+    return { statusCode: 200, body: JSON.stringify({ message: 'Email sent successfully' }) };
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ error: 'Error sending email' });
+    return { statusCode: 500, body: JSON.stringify({ error: 'Error sending email' }) };
   }
 });
 
-// Обертываем наше приложение Express в функцию
-const handler = async (event) => {
-  try {
-    const { httpMethod, body } = event;
-
-    if (httpMethod !== 'POST') {
-      return { statusCode: 405, body: 'Method Not Allowed' };
-    }
-
-    const data = JSON.parse(body);
-
-    const response = await new Promise((resolve, reject) => {
-      // Функция обработки запроса Express
-      app(req, res, (result) => {
-        resolve({ statusCode: result.status, body: result.body });
-      });
-    });
-
-    return response;
-  } catch (error) {
-    console.error(error);
-    return { statusCode: 500, body: 'Internal Server Error' };
-  }
-};
-
-module.exports = { handler };
+module.exports = { handler: app };
