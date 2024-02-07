@@ -4,7 +4,8 @@ export default function footer() {
   return (
     <footer>
       <div className='copy'>
-      © Всі права захищені
+      <p>© Всі права захищені</p>
+      <p>Created by Denys Ivashchenko</p>
       </div>
     </footer>
   )
