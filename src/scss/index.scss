@@ -201,16 +201,19 @@ header{
         width: 500px;
         height: 200px;
         position: fixed;
-        top: 35%;
+        left: 50%;
+        top:30%;
+        margin-left: -250px;
         border: 2px solid black;
-        left: 32%;
         p:first-child{
             font-size: 30px;
-            margin: 20px 120px;
+            text-align: center;
+            margin: 10px;
         }
         p{
             font-size: 20px;
-            margin: 20px 25px;
+            text-align: center;
+            margin: 20px;
         }
         a{
             background-color: rgb(255, 71, 71);
@@ -633,6 +636,21 @@ footer{
 }
 @media  screen and (width<741px) {
     .share-cart{
+        .agree{
+            width: 350px;
+            height: 175px;
+            margin-left: -175px;
+            p:first-child{
+                font-size: 25px;
+            }
+            p{
+                font-size: 15px;
+            }
+            a{
+                width: 200px;
+                margin-left: 25px;
+            }
+        }
         .form{
             form{
                 label{

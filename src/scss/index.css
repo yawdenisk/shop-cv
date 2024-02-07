@@ -205,17 +205,20 @@ header .links a:first-child {
   width: 500px;
   height: 200px;
   position: fixed;
-  top: 35%;
+  left: 50%;
+  top: 30%;
+  margin-left: -250px;
   border: 2px solid black;
-  left: 32%;
 }
 .share-cart .agree p:first-child {
   font-size: 30px;
-  margin: 20px 120px;
+  text-align: center;
+  margin: 10px;
 }
 .share-cart .agree p {
   font-size: 20px;
-  margin: 20px 25px;
+  text-align: center;
+  margin: 20px;
 }
 .share-cart .agree a {
   background-color: rgb(255, 71, 71);
@@ -604,6 +607,21 @@ footer .copy {
   }
 }
 @media screen and (width < 741px) {
+  .share-cart .agree {
+    width: 350px;
+    height: 175px;
+    margin-left: -175px;
+  }
+  .share-cart .agree p:first-child {
+    font-size: 25px;
+  }
+  .share-cart .agree p {
+    font-size: 15px;
+  }
+  .share-cart .agree a {
+    width: 200px;
+    margin-left: 25px;
+  }
   .share-cart .form form label input {
     width: 180px;
     height: 21px;
