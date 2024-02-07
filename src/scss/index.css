@@ -733,8 +733,7 @@ footer .copy {
     height: 300px;
   }
   .cart-main .view .img-area img {
-    height: 200px;
-    width: 175px;
+    width: 150px;
   }
   .cart-main .view .text-area {
     overflow-y: scroll;
