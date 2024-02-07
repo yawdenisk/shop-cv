@@ -366,7 +366,8 @@ header .links a:first-child {
   border: 1px solid black;
   position: fixed;
   top: 20%;
-  left: 25%;
+  left: 50%;
+  margin-left: -350px;
   width: 700px;
   height: 500px;
   display: flex;
@@ -550,7 +551,7 @@ footer .copy {
   }
   .cart-main .view {
     width: 600px;
-    left: 20%;
+    margin-left: -300px;
   }
   .cart-main .view .text-area .button1 {
     left: 40px;
@@ -571,7 +572,7 @@ footer .copy {
   }
   .cart-main .view {
     width: 500px;
-    left: 15%;
+    margin-left: -250px;
   }
   .cart-main .view .img-area img {
     width: 250px;
@@ -629,7 +630,7 @@ footer .copy {
 }
 @media screen and (width < 651px) {
   .cart-main .view {
-    left: 15%;
+    margin-left: -175px;
     width: 350px;
     height: 350px;
   }
@@ -726,7 +727,7 @@ footer .copy {
     width: 300px;
   }
   .cart-main .view {
-    left: 8%;
+    margin-left: -150px;
     width: 300px;
     height: 300px;
   }

@@ -366,7 +366,8 @@ header{
         border: 1px solid black;
         position: fixed;
         top: 20%;
-        left: 25%;
+        left: 50%;
+        margin-left: -350px;
         width: 700px;
         height: 500px;
         display: flex;
@@ -553,7 +554,7 @@ footer{
         margin: 0;
         .view{
             width: 600px;
-            left: 20%;
+            margin-left: -300px;
             .text-area{
                 .button1{
                     left: 40px;
@@ -587,7 +588,7 @@ footer{
         margin: 0 0;
         .view{
             width: 500px;
-            left: 15%;
+            margin-left: -250px;
             .img-area{
                 img{
                     width: 250px;
@@ -666,7 +667,7 @@ footer{
 @media screen and (width<651px) {
     .cart-main{
             .view{
-                left: 15%;
+                margin-left: -175px;
                 width: 350px;
                 height: 350px;
                 .img-area{
@@ -777,7 +778,7 @@ footer{
     }
     .cart-main{
         .view{
-            left: 8%;
+            margin-left: -150px;
             width: 300px;
             height: 300px;
             .img-area{
