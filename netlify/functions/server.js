@@ -1,5 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const serverless = require('serverless-http');
+const path = require('path');
 
 const app = express();
 
@@ -37,11 +39,21 @@ app.post('/send-email', async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    return { statusCode: 200, body: JSON.stringify({ message: 'Email sent successfully' }) };
+    return res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error(error);
-    return { statusCode: 500, body: JSON.stringify({ error: 'Error sending email' }) };
+    return res.status(500).json({ error: 'Error sending email' });
   }
 });
 
-module.exports = { handler: app };
+// Добавляем обработку статических файлов из папки build
+app.use(express.static(path.join(__dirname, 'build')));
+
+// Обработка ошибок
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!');
+});
+
+// Оборачиваем приложение Express в функцию для Netlify
+module.exports.handler = serverless(app);
