@@ -196,6 +196,35 @@ header{
     }
 }
 .share-cart{
+    .agree{
+        background-color: white;
+        width: 500px;
+        height: 200px;
+        position: fixed;
+        top: 35%;
+        border: 2px solid black;
+        left: 32%;
+        p:first-child{
+            font-size: 30px;
+            margin: 20px 120px;
+        }
+        p{
+            font-size: 20px;
+            margin: 20px 25px;
+        }
+        a{
+            background-color: rgb(255, 71, 71);
+            cursor: pointer;
+            border: 1px solid black;
+            border-radius: 20px; 
+            color: white;
+            font-size: 17px;
+            margin-left: 110px;
+            padding: 15px 50px;
+            position: absolute;
+            bottom: 20px;
+        }
+    }
     background-color: rgb(255, 255, 255);
     margin: 0 150px;
     display: flex;
