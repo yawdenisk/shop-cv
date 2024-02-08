@@ -13,6 +13,10 @@ function App() {
     const filteredItems = data.filter((el) => el.category === category);
     setCartItems(filteredItems);
   }
+  function showCartName(name) {
+    const filteredItems = data.filter((el) => el.title.toLowerCase().includes(name.toLowerCase()));
+    setCartItems(filteredItems);
+  }
   let [orders, setOrders] = useState([]);
   let ordersLength = orders.length;
   let [quantity, setQuantity] = useState();
@@ -41,7 +45,7 @@ function App() {
     <div className="container">
       <Header setCartItems={setCartItems} cartItems={cartItems} quantity={quantity} setQuantity={setQuantity} ordersLength={ordersLength} orders={orders} deleteOrder={deleteOrder} count={count}/>
       <Routes>
-      <Route path="/" element={<Cart addToCart={addToCart} cartItems={cartItems} showCart={showCart}/>}></Route>
+      <Route path="/" element={<Cart showCartName={showCartName} addToCart={addToCart} cartItems={cartItems} showCart={showCart}/>}></Route>
       <Route path="/contacts" element={<Contacts />}></Route>
       <Route path="/blog" element={<Blog/>}></Route>
       <Route path="/cart" element={<ShareCart orders={orders} count={count} deleteOrder={deleteOrder} setQuantity={setQuantity}/>}></Route>

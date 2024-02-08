@@ -396,6 +396,20 @@ header{
 .cart-main{
     margin: 0 150px;
     position: relative;
+    label{
+        margin-top: 25px;
+        display: flex;
+            align-items: center;
+            justify-content: center ;
+            ::placeholder {
+                text-align: center;
+            }
+        input{
+            width: 300px;
+            height: 30px;
+            display: block;
+        }
+    }
     .view{
         background-color: white;
         border: 1px solid black;

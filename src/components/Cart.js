@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function Cart({addToCart, showCart, cartItems}) {
+export default function Cart({addToCart, showCart, cartItems, showCartName}) {
   let [clicked, setClicked] = useState(false);
   let [slectedItem, setSelectedItem] = useState(null);
   function showItem(item){
@@ -16,6 +16,9 @@ export default function Cart({addToCart, showCart, cartItems}) {
         <button onClick={() => showCart('piling')}>Пілінги</button>
         <button onClick={() => showCart('toniq')}>Тоніки</button>
       </div>
+      <label>
+          <input placeholder="пошук товару за назвою"onChange={(event) => showCartName(event.target.value)}></input>
+        </label>
         <div className='carts'>
           {cartItems.map((el) => (
             <div className='cart' key={el.id}>
