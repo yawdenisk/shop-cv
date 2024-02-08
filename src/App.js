@@ -42,19 +42,8 @@ function App() {
   orders.forEach((el) => {
     count += el.count * el.quantity;
   })
-  function ErrorFallback({error}){
-    return(
-      <div>
-      <h2>Что-то пошло не так!</h2>
-      <p>Ошибка: {error.message}</p>
-      <p>Пожалуйста, перезагрузите страницу или попробуйте позже.</p>
-    </div>
-    )
-
-  }
   return (
     <div className="container">
-       <ErrorBoundary FallbackComponent={ErrorFallback}>
       <Header setCartItems={setCartItems} cartItems={cartItems} quantity={quantity} setQuantity={setQuantity} ordersLength={ordersLength} orders={orders} deleteOrder={deleteOrder} count={count}/>
       <Routes>
       <Route path="/" element={<Cart showCartName={showCartName} addToCart={addToCart} cartItems={cartItems} showCart={showCart}/>}></Route>
@@ -63,7 +52,6 @@ function App() {
       <Route path="/cart" element={<ShareCart orders={orders} count={count} deleteOrder={deleteOrder} setQuantity={setQuantity}/>}></Route>
       </Routes> 
       <Footer />
-      </ErrorBoundary>
     </div>
   );
 }
