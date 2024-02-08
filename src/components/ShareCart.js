@@ -30,7 +30,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
       let [agree, setArgee] = useState(false)
       let [error, setError] = useState(false);
       function check(){
-        if (userName.length>1 && userSurName.length>1 && userPost.length>4 && userPhone.length>=10 && userCity.length>1 && userMail.length>10){
+        if (userName.length>1 && userSurName.length>1 && 5<=userPost.length<=6 && userPhone.length==13 && userCity.length>1 && userMail.length>10){
           setArgee(agree = true);
           sendOrdersToEmail();
         }else{
@@ -74,7 +74,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
             </label>
             <label>
                 Телефон:
-                <input type="text" name="name" onChange={(event) => setUserPhone(event.target.value)}/>
+                <input type="text" name="name" placeholder='+380' onChange={(event) => setUserPhone(event.target.value)}/>
             </label>
             <label>
                 Пошта:
