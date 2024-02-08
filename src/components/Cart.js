@@ -17,7 +17,7 @@ export default function Cart({addToCart, showCart, cartItems, showCartName}) {
         <button onClick={() => showCart('toniq')}>Тоніки</button>
       </div>
       <label>
-          <input placeholder="пошук товару за назвою"onChange={(event) => showCartName(event.target.value)}></input>
+          <input placeholder="пошук товару за назвою 🔍︎"onChange={(event) => showCartName(event.target.value)}></input>
         </label>
         <div className='carts'>
           {cartItems.map((el) => (
