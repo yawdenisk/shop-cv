@@ -41,6 +41,14 @@ function App() {
   orders.forEach((el) => {
     count += el.count * el.quantity;
   })
+  function NotFound() {
+    return (
+      <div>
+        <h2>Страница не найдена</h2>
+        <p>Попробуйте <button onClick={() => window.location.reload()}>перезагрузить страницу</button>.</p>
+      </div>
+    );
+  }
   return (
     <div className="container">
       <Header setCartItems={setCartItems} cartItems={cartItems} quantity={quantity} setQuantity={setQuantity} ordersLength={ordersLength} orders={orders} deleteOrder={deleteOrder} count={count}/>
@@ -49,6 +57,7 @@ function App() {
       <Route path="/contacts" element={<Contacts />}></Route>
       <Route path="/blog" element={<Blog/>}></Route>
       <Route path="/cart" element={<ShareCart orders={orders} count={count} deleteOrder={deleteOrder} setQuantity={setQuantity}/>}></Route>
+      <Route path="/*" element={<NotFound />} />
       </Routes> 
       <Footer />
     </div>
