@@ -196,6 +196,41 @@ header{
     }
 }
 .share-cart{
+    .error{
+        position: fixed;
+        width: 500px;
+        height: 200px;
+        top: 30%;
+        text-align: center;
+        font-size: 30px;
+        background-color: white;
+        left: 50%;
+        border: 2px solid black;
+        margin-left: -250px;
+        p:first-child{
+            font-size: 30px;
+            margin-top: 30px;
+        }
+        P{
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .button1{
+            font-size: 20px;
+            width: 250px;
+            height: 50px;  
+            border-radius: 20px;
+            position: absolute;
+            margin-left: -125px;
+            bottom: 20px;
+            left: 50%;
+            border: 1px solid black;
+            cursor: pointer;
+            color:white;
+            background-color: rgb(255, 71, 71);
+            display: table;
+        }
+       }
     .agree{
         background-color: white;
         width: 500px;
@@ -638,10 +673,27 @@ footer{
 }
 @media  screen and (width<741px) {
     .share-cart{
-        .agree{
-            width: 350px;
+        .error{
+            width: 300px;
             height: 175px;
-            margin-left: -175px;
+            margin-left: -150px;
+            p:first-child{
+                font-size: 23px;
+                margin-top: 20px;
+            }
+            p{
+                font-size: 15px;
+            }
+            .button1{
+                height: 40px;
+                width: 200px;
+                margin-left: -100px;
+            }
+        }
+        .agree{
+            width: 300px;
+            height: 175px;
+            margin-left: -150px;
             p:first-child{
                 font-size: 25px;
             }
@@ -649,7 +701,7 @@ footer{
                 font-size: 15px;
             }
             a{
-                width: 200px;
+                padding: 10px 30px;
                 margin-left: 25px;
             }
         }

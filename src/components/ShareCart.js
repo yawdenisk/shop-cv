@@ -28,6 +28,15 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
       let [userCity, setUserCity] = useState('')
       let [userMail, setUserMail] = useState('')
       let [agree, setArgee] = useState(false)
+      let [error, setError] = useState(false);
+      function check(){
+        if (userName.length>1 && userSurName.length>1 && userPost.length>4 && userPhone.length>=10 && userCity.length>1 && userMail.length>10){
+          setArgee(agree = true);
+          sendOrdersToEmail();
+        }else{
+          setError(error = true)
+        }
+      }
   return (
     <div className='share-cart'>
         {orders.length > 0 ? (
@@ -50,7 +59,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
                     ))}
              </div>
             <p className='sum'>До сплати : {count.toFixed(2)} грн</p>
-            <button className='button1' onClick={() => {sendOrdersToEmail(); setArgee(agree = true);}}>Відправити замовлення</button>
+            <button className='button1' onClick={() => check()}>Відправити замовлення</button>
         </div>
         <div className='form'>
         <form>
@@ -80,7 +89,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
                 <input type="text" name="name" onChange={(event) => setUserPost(event.target.value)}/>
             </label>
             </form>
-            <button className='button1' onClick={() => {sendOrdersToEmail(); setArgee(agree = true);}}>Відправити замовленяя</button>
+            <button className='button1' onClick={() => check()}>Відправити замовленяя</button>
         </div>
         </>
         ) : (
@@ -94,6 +103,13 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
             <p>Дякуємо за покупку</p>
             <p>Ваше замовлення успішно відправлено на обробку</p>
             <Link to='/'>Повернутися до каталогу</Link>
+          </div>
+        )}
+        {error && (
+          <div className='error'>
+            <p>Ви ввели некоректні данні</p>
+            <p>Перевірте правильність написання</p>
+            <button className='button1' onClick={() => setError(error=false)}>Спробувати ще раз</button>
           </div>
         )}
     </div>

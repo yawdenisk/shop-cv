@@ -200,6 +200,41 @@ header .links a:first-child {
   height: 720px;
   justify-content: space-between;
 }
+.share-cart .error {
+  position: fixed;
+  width: 500px;
+  height: 200px;
+  top: 30%;
+  text-align: center;
+  font-size: 30px;
+  background-color: white;
+  left: 50%;
+  border: 2px solid black;
+  margin-left: -250px;
+}
+.share-cart .error p:first-child {
+  font-size: 30px;
+  margin-top: 30px;
+}
+.share-cart .error P {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.share-cart .error .button1 {
+  font-size: 20px;
+  width: 250px;
+  height: 50px;
+  border-radius: 20px;
+  position: absolute;
+  margin-left: -125px;
+  bottom: 20px;
+  left: 50%;
+  border: 1px solid black;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(255, 71, 71);
+  display: table;
+}
 .share-cart .agree {
   background-color: white;
   width: 500px;
@@ -609,10 +644,27 @@ footer .copy {
   }
 }
 @media screen and (width < 741px) {
-  .share-cart .agree {
-    width: 350px;
+  .share-cart .error {
+    width: 300px;
     height: 175px;
-    margin-left: -175px;
+    margin-left: -150px;
+  }
+  .share-cart .error p:first-child {
+    font-size: 23px;
+    margin-top: 20px;
+  }
+  .share-cart .error p {
+    font-size: 15px;
+  }
+  .share-cart .error .button1 {
+    height: 40px;
+    width: 200px;
+    margin-left: -100px;
+  }
+  .share-cart .agree {
+    width: 300px;
+    height: 175px;
+    margin-left: -150px;
   }
   .share-cart .agree p:first-child {
     font-size: 25px;
@@ -621,7 +673,7 @@ footer .copy {
     font-size: 15px;
   }
   .share-cart .agree a {
-    width: 200px;
+    padding: 10px 30px;
     margin-left: 25px;
   }
   .share-cart .form form label input {
