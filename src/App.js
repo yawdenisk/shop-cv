@@ -7,7 +7,6 @@ import { Route, Routes } from "react-router-dom";
 import Contacts from "./components/Contacts.js";
 import Blog from "./components/Blog.js";
 import ShareCart from "./components/ShareCart.js";
-import { ErrorBoundary } from 'react-error-boundary';
 function App() {
   const [cartItems, setCartItems] = useState(data);
   function showCart(category) {
