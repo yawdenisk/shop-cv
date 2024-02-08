@@ -42,6 +42,20 @@ function App() {
   orders.forEach((el) => {
     count += el.count * el.quantity;
   })
+  const [error, setError] = useState(false);
+
+  function reloadPage() {
+    window.location.reload();
+  }
+
+  if (error) {
+    return (
+      <div>
+        <h2>Что-то пошло не так!</h2>
+        <p>Попробуйте <button onClick={reloadPage}>перезагрузить страницу</button>.</p>
+      </div>
+    );
+  }
   return (
     <div className="container">
       <Header setCartItems={setCartItems} cartItems={cartItems} quantity={quantity} setQuantity={setQuantity} ordersLength={ordersLength} orders={orders} deleteOrder={deleteOrder} count={count}/>
