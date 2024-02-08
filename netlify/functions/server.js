@@ -45,15 +45,15 @@ app.post('/send-email', async (req, res) => {
     return res.status(500).json({ error: 'Error sending email' });
   }
 });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'error.html'));
+});
 
-// Добавляем обработку статических файлов из папки build
 app.use(express.static(path.join(__dirname, 'build')));
 
-// Обработка ошибок
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something went wrong!');
 });
 
-// Оборачиваем приложение Express в функцию для Netlify
 module.exports.handler = serverless(app);
