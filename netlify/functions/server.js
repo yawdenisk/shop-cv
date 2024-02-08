@@ -45,15 +45,25 @@ app.post('/send-email', async (req, res) => {
     return res.status(500).json({ error: 'Error sending email' });
   }
 });
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'error.html'));
-});
 
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send('Something went wrong!');
+  res.status(500).send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Error</title>
+    </head>
+    <body>
+      <h1>Что-то пошло не так!</h1>
+      <p>Пожалуйста, <a href="#" onclick="window.location.reload();">обновите страницу</a>.</p>
+    </body>
+    </html>
+  `);
 });
 
 module.exports.handler = serverless(app);
