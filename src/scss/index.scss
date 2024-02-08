@@ -830,6 +830,18 @@ footer{
         }
     }
     .cart-main{
+        .carts{
+            margin: 30px;
+        }
+        .filter-menu{
+            margin: 20px;
+            button{
+                font-size: 15px;
+                width: 75px;
+                height: 25px;
+                margin-top: 5px;
+            }
+        }
         .view{
             margin-left: -150px;
             width: 300px;
@@ -903,7 +915,7 @@ footer{
         margin: 0 10px;
         p:first-child{
             font-size: 30px;
-            padding-top: 130px;
+            padding-top: 120px;
         }
         .carts{
             .cart{

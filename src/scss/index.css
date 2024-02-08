@@ -779,6 +779,18 @@ footer .copy {
   header .cart-board {
     width: 300px;
   }
+  .cart-main .carts {
+    margin: 30px;
+  }
+  .cart-main .filter-menu {
+    margin: 20px;
+  }
+  .cart-main .filter-menu button {
+    font-size: 15px;
+    width: 75px;
+    height: 25px;
+    margin-top: 5px;
+  }
   .cart-main .view {
     margin-left: -150px;
     width: 300px;
@@ -846,7 +858,7 @@ footer .copy {
   }
   .cart-main p:first-child {
     font-size: 30px;
-    padding-top: 130px;
+    padding-top: 120px;
   }
   .cart-main .carts .cart {
     width: 170px;
