@@ -48,9 +48,11 @@ app.post('/send-email', async (req, res) => {
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something went wrong!');
+// Обработчик маршрута для перенаправления всех несуществующих запросов на главную страницу
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-module.exports.handler = serverless(app);
+module.exports = {
+  handler: serverless(app)
+};
