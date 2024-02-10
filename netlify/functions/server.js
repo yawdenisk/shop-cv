@@ -46,13 +46,4 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-app.use(express.static(path.join(__dirname, 'build')));
-
-// Обработчик маршрута для перенаправления всех несуществующих запросов на главную страницу
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-module.exports = {
-  handler: serverless(app)
-};
+module.exports.handler = serverless(app);
