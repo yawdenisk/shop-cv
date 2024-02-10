@@ -46,4 +46,11 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!');
+});
+
 module.exports.handler = serverless(app);
