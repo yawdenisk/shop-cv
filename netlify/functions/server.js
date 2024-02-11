@@ -1,26 +1,16 @@
-const express = require('express');
 const nodemailer = require('nodemailer');
-const serverless = require('serverless-http');
-const path = require('path');
 
-const app = express();
-
-app.use(express.json()); 
-
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'shop.dla.tebe@gmail.com',
-    pass: 'fgaq pihy lguw mdia',
-  },
-});
-
-app.post('/send-email', async (req, res) => {
-  const { orders, count, userName, userSurName, userMail, userCity, userPost, userPhone } = req.body;
-
-  if (!orders) {
-    return res.status(400).json({ error: 'Bad Request: Orders data is missing' });
-  }
+exports.handler = async function(event, context) {
+  const { orders, count, userName, userSurName, userMail, userCity, userPost, userPhone } = JSON.parse(event.body);
+  
+  // Ваша логика для отправки почты
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'shop.dla.tebe@gmail.com',
+      pass: 'fgaq pihy lguw mdia',
+    },
+  });
 
   const emailBody = orders.map(order => `${order.title} - ${order.quantity} шт.`).join('\n') + '\n' + 'Загальна ціна :' + count.toFixed(2) + '\n' + 
     'Ім\'я:  ' + userName + '\n' + 
@@ -39,22 +29,15 @@ app.post('/send-email', async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    return res.status(200).json({ message: 'Email sent successfully' });
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: 'Email sent successfully' }),
+    };
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ error: 'Error sending email' });
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ message: 'Error sending email' }),
+    };
   }
-});
-
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something went wrong!');
-});
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-module.exports.handler = serverless(app);
+};п
