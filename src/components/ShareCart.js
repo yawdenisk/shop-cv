@@ -52,7 +52,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
           });
           document.getElementsByName('phone').forEach(input => {
             const length = input.value.length;
-            if ((length < 10 || length > 13) || !/^\+?\d+$/.test(input.value)) {
+            if ((length < 10 || length > 13) && !/^\+?\d+$/.test(input.value)) {
               input.style.borderColor = 'red';
               setError(error = true)
             }else{
