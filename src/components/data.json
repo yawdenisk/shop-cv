@@ -43,8 +43,7 @@
         "quantity" : 1, 
         "category" : "piling",
         "description" : "v,eparhgpiokeauvgrieoshgurohesopdkgjea9ugre[u" 
-    }
-    ,
+    },
     {
         "id" : "6",
         "title" : "КРЕМ-СЯЯННЯ З ВІТАМІНОМ С C-ILLUMINATION 3D-MOISTURIZER",
@@ -53,8 +52,7 @@
         "quantity" : 1, 
         "category" : "piling",
         "description" : "v,eparhgpiokeauvgrieoshgurohesopdkgjea9ugre[u" 
-    }
-    ,
+    },
     {
         "id" : "7",
         "title" : "КРЕМ-СЯЯННЯ З ВІТАМІНОМ С C-ILLUMINATION 3D-MOISTURIZER",
@@ -63,8 +61,7 @@
         "quantity" : 1, 
         "category" : "piling",
         "description" : "v,eparhgpiokeauvgrieoshgurohesopdkgjea9ugre[uiytiiojpe]styin[teriytordiyiptryutpuydtynturdmytuiprmynutpirmytnupimtnuiydutpyudytutpiruydpitrnyutpriyunprtiyunprtiyunirtynrtpiurtpi" 
-    }
-    ,
+    },
     {
         "id" : "8",
         "title" : "КРЕМ-СЯЯННЯ З ВІТАМІНОМ С C-ILLUMINATION 3D-MOISTURIZER",
@@ -73,8 +70,7 @@
         "quantity" : 1, 
         "category" : "piling",
         "description" : "v,eparhgpiokeauvgrieoshgurohesopdkgjea9ugre[ukrghfeshngrohseomrhgoevhrugshrguihesiuhgorvsehgriuu" 
-    }
-    ,
+    },
     {
         "id" : "9",
         "title" : "КРЕМ-СЯЯННЯ З ВІТАМІНОМ С C-ILLUMINATION 3D-MOISTURIZER",
@@ -83,5 +79,14 @@
         "quantity" : 1, 
         "category" : "piling",
         "description" : "v,eparhgpiokeauvgrieoshgurohesopdkgjea9ugre[u" 
-    }
+    },
+        {
+        "id" : "10",
+        "title" : "КРЕМ ДЛЯ РУК",
+        "count" : "200.00",
+        "foto" : "1.png",
+        "quantity" : 1, 
+        "category" : "piling",
+        "description" : "крем для рук" 
+    },
 ]
