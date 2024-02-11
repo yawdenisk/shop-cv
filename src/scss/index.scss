@@ -491,7 +491,7 @@ header{
             }
             p:nth-child(4){
                 max-height: 130px;
-                overflow-y: auto;
+                overflow-y: scroll;
             }
             p{
                 padding: 10px 30px;
@@ -617,7 +617,7 @@ footer{
                 }
                 p:nth-child(4){
                     max-height: 100px;
-                    overflow-y: auto;
+                    overflow-y: scroll;
                 }
             }
             .img-area{
@@ -661,7 +661,7 @@ footer{
                 }
                 p:nth-child(4){
                     max-height: 80px;
-                    overflow-y: auto;
+                    overflow-y: scroll;
                 }
             }
         }
@@ -767,6 +767,7 @@ footer{
                         font-size: 11px;
                         padding-top: 2px;
                         padding-bottom: 2px;
+                        padding: 5px 20px;
                     }
                     .button1{
                         width: 140px;
@@ -776,7 +777,7 @@ footer{
                     }
                     p:nth-child(4){
                         max-height: 120px;
-                        overflow-y: auto;
+                        overflow-y: scroll;
                     }
                 }
             }
@@ -891,6 +892,7 @@ footer{
                     font-size: 10px;
                     padding-top: 2px;
                     padding-bottom: 2px;
+                    padding: 5px 10px;
                 }
                 .button1{
                     width: 120px;
@@ -899,8 +901,8 @@ footer{
                     bottom: 15px;
                 }
                 p:nth-child(4){
-                    max-height: 80px;
-                    overflow-y: auto;
+                    max-height: 100px;
+                    overflow-y: scroll;
                 }
             }
         }

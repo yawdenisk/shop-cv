@@ -496,7 +496,7 @@ header .links a:first-child {
 }
 .cart-main .view .text-area p:nth-child(4) {
   max-height: 130px;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 .cart-main .view .text-area p {
   padding: 10px 30px;
@@ -617,7 +617,7 @@ footer .copy {
   }
   .cart-main .view .text-area p:nth-child(4) {
     max-height: 100px;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
   .cart-main .view .img-area img {
     width: 300px;
@@ -646,7 +646,7 @@ footer .copy {
   }
   .cart-main .view .text-area p:nth-child(4) {
     max-height: 80px;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
   .share-cart .form {
     height: 350px;
@@ -733,6 +733,7 @@ footer .copy {
     font-size: 11px;
     padding-top: 2px;
     padding-bottom: 2px;
+    padding: 5px 20px;
   }
   .cart-main .view .text-area .button1 {
     width: 140px;
@@ -742,7 +743,7 @@ footer .copy {
   }
   .cart-main .view .text-area p:nth-child(4) {
     max-height: 120px;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
   .cart-main .carts .cart {
     width: 210px;
@@ -843,6 +844,7 @@ footer .copy {
     font-size: 10px;
     padding-top: 2px;
     padding-bottom: 2px;
+    padding: 5px 10px;
   }
   .cart-main .view .text-area .button1 {
     width: 120px;
@@ -851,8 +853,8 @@ footer .copy {
     bottom: 15px;
   }
   .cart-main .view .text-area p:nth-child(4) {
-    max-height: 80px;
-    overflow-y: auto;
+    max-height: 100px;
+    overflow-y: scroll;
   }
   .share-cart {
     display: inline;
