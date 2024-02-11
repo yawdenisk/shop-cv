@@ -52,7 +52,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
           });
           document.getElementsByName('phone').forEach(input => {
             const length = input.value.length;
-            if ((length < 10 || length > 13) && !/^\d*$/.test(input)) {
+            if ((length < 10 || length > 13) || !/^\d*$/.test(input)) {
               input.style.borderColor = 'red';
               setError(error = true)
             }else{
@@ -61,7 +61,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
           });
           document.getElementsByName('postindex').forEach(input => {
             const length = input.value.length;
-            if ((length < 5 || length > 6) && !/^\d*$/.test(input)) {
+            if ((length < 5 || length > 6) || !/^\d*$/.test(input)) {
               input.style.borderColor = 'red';
               setError(error = true)
             }else{
