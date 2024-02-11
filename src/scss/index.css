@@ -494,10 +494,14 @@ header .links a:first-child {
   font-size: 25px;
   padding: 40px 30px;
 }
+.cart-main .view .text-area p:nth-child(4) {
+  max-height: 130px;
+  overflow-y: auto;
+}
 .cart-main .view .text-area p {
   padding: 10px 30px;
   word-wrap: break-word;
-  font-size: 17px;
+  font-size: 15px;
 }
 .cart-main .filter-menu {
   margin: 30px;
@@ -611,6 +615,10 @@ footer .copy {
   .cart-main .view .text-area .button1 {
     left: 40px;
   }
+  .cart-main .view .text-area p:nth-child(4) {
+    max-height: 100px;
+    overflow-y: auto;
+  }
   .cart-main .view .img-area img {
     width: 300px;
   }
@@ -635,6 +643,10 @@ footer .copy {
   .cart-main .view .text-area .button1 {
     width: 200px;
     left: 25px;
+  }
+  .cart-main .view .text-area p:nth-child(4) {
+    max-height: 80px;
+    overflow-y: auto;
   }
   .share-cart .form {
     height: 350px;
@@ -726,6 +738,11 @@ footer .copy {
     width: 140px;
     height: 40px;
     left: 20px;
+    bottom: 25px;
+  }
+  .cart-main .view .text-area p:nth-child(4) {
+    max-height: 120px;
+    overflow-y: auto;
   }
   .cart-main .carts .cart {
     width: 210px;
@@ -823,7 +840,7 @@ footer .copy {
     font-size: 14px;
   }
   .cart-main .view .text-area p {
-    font-size: 11px;
+    font-size: 10px;
     padding-top: 2px;
     padding-bottom: 2px;
   }
@@ -832,6 +849,10 @@ footer .copy {
     height: 30px;
     left: 20px;
     bottom: 15px;
+  }
+  .cart-main .view .text-area p:nth-child(4) {
+    max-height: 80px;
+    overflow-y: auto;
   }
   .share-cart {
     display: inline;

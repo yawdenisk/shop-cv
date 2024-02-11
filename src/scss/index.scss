@@ -489,10 +489,14 @@ header{
                 font-size: 25px;
                 padding: 40px 30px;
             }
+            p:nth-child(4){
+                max-height: 130px;
+                overflow-y: auto;
+            }
             p{
                 padding: 10px 30px;
                 word-wrap: break-word;  
-                font-size: 17px;
+                font-size: 15px;
             }
         }
     }
@@ -611,6 +615,10 @@ footer{
                 .button1{
                     left: 40px;
                 }
+                p:nth-child(4){
+                    max-height: 100px;
+                    overflow-y: auto;
+                }
             }
             .img-area{
                 img{
@@ -650,6 +658,10 @@ footer{
                 .button1{
                     width: 200px;
                     left: 25px;
+                }
+                p:nth-child(4){
+                    max-height: 80px;
+                    overflow-y: auto;
                 }
             }
         }
@@ -760,6 +772,11 @@ footer{
                         width: 140px;
                         height: 40px;
                         left: 20px;
+                        bottom: 25px;
+                    }
+                    p:nth-child(4){
+                        max-height: 120px;
+                        overflow-y: auto;
                     }
                 }
             }
@@ -871,7 +888,7 @@ footer{
                     font-size: 14px;
                 }
                 p{
-                    font-size: 11px;
+                    font-size: 10px;
                     padding-top: 2px;
                     padding-bottom: 2px;
                 }
@@ -880,6 +897,10 @@ footer{
                     height: 30px;
                     left: 20px;
                     bottom: 15px;
+                }
+                p:nth-child(4){
+                    max-height: 80px;
+                    overflow-y: auto;
                 }
             }
         }
