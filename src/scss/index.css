@@ -539,6 +539,7 @@ header .links a:first-child {
 }
 .cart-main .carts .cart img {
   width: 300px;
+  max-height: 300px;
   background-position: center;
 }
 .cart-main .carts .cart p {
