@@ -30,7 +30,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
       let [agree, setArgee] = useState(false)
       let [error, setError] = useState(false);
       function check(){
-        if (userName.length>1 && userSurName.length>1 && /^\d*$/.test(userPost) && /^\+?\d+$/.test(userPhone) && 5<=userPost.length && userPost.length<=6 && 10<=userPhone.length<=13&& userCity.length>1 && userMail.length>1){
+        if (userName.length>1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userMail) && userSurName.length>1 && /^\d*$/.test(userPost) && /^\+?\d+$/.test(userPhone) && 5<=userPost.length && userPost.length<=6 && 10<=userPhone.length<=13&& userCity.length>1 && userMail.length>1){
           setArgee(agree = true);
           sendOrdersToEmail();
         }else{
@@ -77,10 +77,12 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
             }
           });
           document.getElementsByName('mail').forEach(input => {
-            if (input.value.length <= 1) {
+            const email = input.value;
+            const length = email.length;
+            if (length <= 1 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
               input.style.borderColor = 'red';
-              setError(error = true)
-            }else{
+              setError(true);
+            } else {
               input.style.borderColor = 'grey';
             }
           });
