@@ -34,10 +34,10 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
           setArgee(agree = true);
           sendOrdersToEmail();
         }else{
-          setError(error = true)
           document.getElementsByName('name').forEach(input => {
             if (input.value.length <= 1) {
               input.style.borderColor = 'red';
+              setError(error = true)
             }else{
               input.style.borderColor = 'grey';
             }
@@ -45,6 +45,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
           document.getElementsByName('surname').forEach(input => {
             if (input.value.length <= 1) {
               input.style.borderColor = 'red';
+              setError(error = true)
             }else{
               input.style.borderColor = 'grey';
             }
@@ -53,6 +54,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
             const length = input.value.length;
             if (length < 10 || length > 13) {
               input.style.borderColor = 'red';
+              setError(error = true)
             }else{
               input.style.borderColor = 'grey';
             }
@@ -61,6 +63,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
             const length = input.value.length;
             if (length < 5 || length > 6) {
               input.style.borderColor = 'red';
+              setError(error = true)
             }else{
               input.style.borderColor = 'grey';
             }
@@ -68,6 +71,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
           document.getElementsByName('city').forEach(input => {
             if (input.value.length <= 1) {
               input.style.borderColor = 'red';
+              setError(error = true)
             }else{
               input.style.borderColor = 'grey';
             }
@@ -75,6 +79,7 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
           document.getElementsByName('mail').forEach(input => {
             if (input.value.length <= 1) {
               input.style.borderColor = 'red';
+              setError(error = true)
             }else{
               input.style.borderColor = 'grey';
             }
