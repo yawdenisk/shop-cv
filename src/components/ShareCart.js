@@ -30,11 +30,55 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
       let [agree, setArgee] = useState(false)
       let [error, setError] = useState(false);
       function check(){
-        if (userName.length>1 && userSurName.length>1 && 5<=userPost.length<=6 && 10<=userPhone.length<=13&& userCity.length>1 && userMail.length>10){
+        if (userName.length>1 && userSurName.length>1 && 5<=userPost.length<=6 && 10<=userPhone.length<=13&& userCity.length>1 && userMail.length>1){
           setArgee(agree = true);
           sendOrdersToEmail();
         }else{
           setError(error = true)
+          document.getElementsByName('name').forEach(input => {
+            if (input.value.length <= 1) {
+              input.style.borderColor = 'red';
+            }else{
+              input.style.borderColor = 'grey';
+            }
+          });
+          document.getElementsByName('surname').forEach(input => {
+            if (input.value.length <= 1) {
+              input.style.borderColor = 'red';
+            }else{
+              input.style.borderColor = 'grey';
+            }
+          });
+          document.getElementsByName('phone').forEach(input => {
+            const length = input.value.length;
+            if (length < 10 || length > 13) {
+              input.style.borderColor = 'red';
+            }else{
+              input.style.borderColor = 'grey';
+            }
+          });
+          document.getElementsByName('postindex').forEach(input => {
+            const length = input.value.length;
+            if (length < 5 || length > 6) {
+              input.style.borderColor = 'red';
+            }else{
+              input.style.borderColor = 'grey';
+            }
+          });
+          document.getElementsByName('city').forEach(input => {
+            if (input.value.length <= 1) {
+              input.style.borderColor = 'red';
+            }else{
+              input.style.borderColor = 'grey';
+            }
+          });
+          document.getElementsByName('mail').forEach(input => {
+            if (input.value.length <= 1) {
+              input.style.borderColor = 'red';
+            }else{
+              input.style.borderColor = 'grey';
+            }
+          });
         }
       }
   return (
@@ -70,23 +114,23 @@ export default function ShareCart({count, orders, deleteOrder, setQuantity}) {
             </label>
             <label>
                 Прізвище:
-                <input type="text" name="name" onChange={(event) => setUserSurName(event.target.value)} />
+                <input type="text" name="surname" onChange={(event) => setUserSurName(event.target.value)} />
             </label>
             <label>
                 Телефон:
-                <input type="text" name="name" placeholder='+380' onChange={(event) => setUserPhone(event.target.value)}/>
+                <input type="text" name="phone" placeholder='+380' onChange={(event) => setUserPhone(event.target.value)}/>
             </label>
             <label>
                 Пошта:
-                <input type="text" name="name" onChange={(event) => setUserMail(event.target.value)}/>
+                <input type="text" name="mail" onChange={(event) => setUserMail(event.target.value)}/>
             </label>
             <label>
                 Місто:
-                <input type="text" name="name" onChange={(event) => setUserCity(event.target.value)}/>
+                <input type="text" name="city" onChange={(event) => setUserCity(event.target.value)}/>
             </label>
             <label>
                 Поштовий індекс:
-                <input type="text" name="name" onChange={(event) => setUserPost(event.target.value)}/>
+                <input type="text" name="postindex" onChange={(event) => setUserPost(event.target.value)}/>
             </label>
             </form>
             <button className='button1' onClick={() => check()}>Відправити замовленяя</button>
