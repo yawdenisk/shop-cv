@@ -10,8 +10,8 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'shop.dla.tebe@gmail.com',
-    pass: 'fgaq pihy lguw mdia',
+    user: '***************',
+    pass: '**** **** **** ****',
   },
 });
 app.use((err, req, res, next) => {
@@ -35,8 +35,8 @@ app.post('/send-email', async (req, res) => {
     'Місто:  ' + userCity + '\n';
   
     const mailOptions = {
-      from: 'shop.dla.tebe@gmail.com',
-      to: 'shop.dla.tebe@gmail.com',
+      from: '*************',
+      to: '************',
       subject: 'Нове замовлення',
       text: emailBody,
     };
