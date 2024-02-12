@@ -1,4 +1,13 @@
 node_modules
 
-# Local Netlify folder
+build
+
 .netlify
+
+express.js
+
+netlify
+
+netlify.toml
+
+
